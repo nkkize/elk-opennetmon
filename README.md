@@ -31,7 +31,7 @@ Start filebeat deamon
 ```
 $ /usr/bin/filebeat -e -c filebeat.yml -d "publish"
 ```
-3. Inside elk container, edit logstash configuration file to take input from Filebeat, process input and forward to elasticsearch and start the deamon.
+Inside elk container, edit logstash configuration file to take input from Filebeat, process input and forward to elasticsearch and start the deamon.
 Edit logstash configuration file. Replace the contents of the file from logstash.conf file in this repository and save it.
 ```
 $ sudo vi /etc/logstash/conf.d/logstash.conf
@@ -40,6 +40,8 @@ Start logstash deamon
 ```
 $ /opt/logstash/bin/logstash -f logstash.conf
 ```
-4. Start your topology and start POX with opennetmon.
-5. On base machine open browser and hit http://{base machine Ip}:5601/app/kibana . Kibana UI will be up. In Settings tab search your index. (In logstash.conf, you can set an index name, currently it is set to filebeat-{DATE}).
-6. In discover tab you can see the logs from opennetmon is being fectched. In visualise and dashboard tab you can create graphs according to your needs.
+Start your topology and start POX with opennetmon.
+```
+./pox.py opennetmon.startup
+```
+On base machine open browser and hit http://{base machine Ip}:5601/app/kibana . Kibana UI will be up. In Settings tab search your index. (In logstash.conf, you can set an index name, currently it is set to filebeat-{DATE}). In discover tab you can see the logs from opennetmon is being fectched. In visualise and dashboard tab you can create graphs according to your needs.
