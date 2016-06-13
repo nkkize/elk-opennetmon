@@ -15,8 +15,9 @@ Open ports description:
 ```
 
 #Running ELK stack
-1. First verify elasticsearch is up. On base machine hit http://{base machine Ip}:9200
-2. Download and install Filebeat on base machine and start the daemon
+First verify elasticsearch is up. On base machine hit http://{base machine Ip}:9200.
+
+Download and install Filebeat on base machine and start the daemon
 ```
 $ curl -L -O https://download.elastic.co/beats/filebeat/filebeat_1.1.0_amd64.deb
 $ sudo dpkg -i filebeat_1.1.0_amd64.deb
