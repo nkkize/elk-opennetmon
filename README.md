@@ -28,7 +28,7 @@ Edit filebeat configuration file. Replace the contents of the file from filebeat
 $ sudo vi /etc/filebeat/filebeat.yml
 ```
 
-Start filebeat deamon
+Start filebeat daemon
 ```
 $ /usr/bin/filebeat -e -c filebeat.yml -d "publish"
 ```
@@ -37,7 +37,7 @@ Edit logstash configuration file. Replace the contents of the file from logstash
 ```
 $ sudo vi /etc/logstash/conf.d/logstash.conf
 ```
-Start logstash deamon
+Start logstash daemon
 ```
 $ /opt/logstash/bin/logstash -f logstash.conf
 ```
